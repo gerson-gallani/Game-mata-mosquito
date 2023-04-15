@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <script>function iniciar() {
+        let nivel = document.getElementById('nivel').value
+        window.location.href = '/jogo.html?'+nivel
+    }</script>
+    <style>
+        *{margin: 0;}
+        html{
+            cursor: url('imagens/mata_mosca.png');
+        }
+
+        body{
+            background: url("/imagens/bg.jpg") no-repeat;
+            background-size: 100%;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+        }
+        .gameOver{
+            width:100%;
+            height: 80%;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            
+            
+        }
+        .gameOver img{
+            position: relative;
+            width: 150px;
+            transform: scaleX(-1);
+            animation: mosca 2s infinite linear;
+        }
+        .gameOver1 button{
+            display: block;
+            margin: 0 ;
+            width: 140px;
+            height: 50px;
+            font-size: 26px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: rgb(163, 163, 163);
+            border: solid 2px rgb(51, 51, 51);
+            box-shadow: 5px 5px 7px black;
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%)
+        }
+        .gameOver1 button:hover{
+            background-color: rgb(154, 197, 0);
+        }
+        .gameOver1 button:active{
+            background-color: rgb(255, 255, 255);
+            color: rgb(145, 145, 145);
+        }
+        .gameOver1{
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translate(-50%);
+            top: 10%;
+        }
+
+        /*Criando animação*/
+        @keyframes mosca {
+            from {
+                left: -150px;
+            }
+            to{
+                left: 100%;
+            }
+            
+        }
+        .inicio{
+            position: absolute;
+            width: 50%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        /*Seleção de dificuldade*/
+        .dificuldade{
+            left:  50%;
+            transform: translate(-50%);
+            position: absolute;
+            width: 180px;
+            height: 30px;
+            font-size: 15px;
+        }
+        .selecao{
+            bottom: 20%;
+        }
+
+        h4{
+            bottom: 23%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-left: 70px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div>
+        <div class="gameOver">
+            <img  src="imagens/mosca.png" alt="">
+        </div>
+        
+    </div>
+    <!--Criando botão-->
+    <div id="container">
+        <img class="inicio" src="/imagens/game.png" alt="">
+        <div>
+            <div class="gameOver1">
+                <button onclick="iniciar()" type="button">Start</button>
+            </div>
+        </div>
+    </div>
+    <!--Criando dificuldade-->
+    <div>
+        <div>
+            <h4 class="dificuldade">Dificuldade</h4>
+            <form id="opcoes" action="">
+                <select id="nivel" name="" class="dificuldade selecao ">
+                    <option disabled value="">Selecione um Nível ></option >
+                        <option value="normal">Normal</option>
+                        <option value="dificil">Dificíl</option>
+                        <option value="chuckNorris">Chuck Norris</option>
+                        <option value="facil">Facíl</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

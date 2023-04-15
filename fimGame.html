@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOver</title>
+    <style>
+        body{
+            background: url("/imagens/bg.jpg") no-repeat;
+            background-size: 100%;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+        }
+
+        .gameOver{
+            width: 80%;
+            height: 80%;
+            margin: 0 auto;
+            
+        }
+        .gameOver img{
+            display: block;
+            margin: 0 auto;
+        }
+        .gameOver button{
+            display: block;
+            margin: 0 auto;
+            width: 140px;
+            height: 50px;
+            font-size: 26px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: rgb(163, 163, 163);
+            border: solid 2px rgb(51, 51, 51);
+            box-shadow: 5px 5px 7px black;
+        }
+        .gameOver button:hover{
+            background-color: rgb(154, 197, 0);
+        }
+        .gameOver button:active{
+            background-color: rgb(255, 255, 255);
+            color: rgb(145, 145, 145);
+        }
+    </style>
+    <script>
+        //Voltar
+        function reiniciar(){
+            window.location.href= 'index.html'
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <div class="gameOver">
+                <img  src="imagens/game_over.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--Criando botão-->
+    <div id="container">
+        <div>
+            <div class="gameOver">
+                <button onclick="reiniciar()" type="button">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

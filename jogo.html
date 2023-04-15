@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Mosquito</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="logica.js"></script>
+</head>
+<!--Onrisize capta o redimensionamento da tela no caso o corpo html-->
+<body onresize="AjustaPalcoJogo()">
+    <div class="painel">
+        <!--Vidas-->
+        <div class="vidas">
+            <img id="v1" src="/imagens/coracao_cheio.png" alt="">
+            <img id="v2" src="/imagens/coracao_cheio.png" alt="">
+            <img id="v3" src="/imagens/coracao_cheio.png" alt="">
+        </div>
+        <!--Cronometro-->
+        <div class="cronometro"> 
+            <span id="cronometro"></span>
+        
+
+        </div>
+    </div>
+       
+
+    <!--efeito cascata chamando elemento mosquito-->
+    <script>
+        setInterval(() => {
+            posicaoRandomica()  
+        },tempoMosca)
+        
+    </script>
+</body>
+</html>

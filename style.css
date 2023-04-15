@@ -1,0 +1,69 @@
+/*Trocando cursor, necessário passar parametros de eixo */
+html{
+    cursor: url('imagens/mata_mosca.png') 30 30, auto;
+}
+
+body{
+    background: url('imagens/bg.jpg') no-repeat;
+    background-size: 100%;
+}
+.mosquito{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.mosquito0{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.mosquito1{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+}
+.mosquito2{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+}
+
+/*alterando cursor*/
+
+
+/*Já é padrão mais apenas por didatica coloquei*/
+.lado0{
+    transform: scaleX(1);
+}
+.lado1{
+    transform: scaleX(-1);
+}
+.painel{position: absolute;
+    width: 190px;
+    height: 50px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    opacity: 0.7;
+    background-color: #fff;
+    left: 0px;
+
+}
+.vidas{
+    float: left;
+    bottom: 0px;
+    position: relative;
+}
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+#cronometro{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    position: relative;
+    bottom: 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
